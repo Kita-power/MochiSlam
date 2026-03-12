@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://fhjrradwarha"]
+[gd_scene load_steps=7 format=3 uid="uid://fhjrradwarha"]
 
 [ext_resource type="Script" uid="uid://bvqcgwu0a011j" path="res://Scripts/Gameplay.gd" id="1_hf1ha"]
 [ext_resource type="AudioStream" uid="uid://be4a75kink0jj" path="res://Moshi_Music/Moshi Moshi (feat. 百足) (Sped up).ogg" id="2_kwrm5"]
 [ext_resource type="Script" uid="uid://ciyn4wvec1wt3" path="res://Scripts/note_spawner.gd" id="2_m34ki"]
 [ext_resource type="Texture2D" uid="uid://dut6835x47pgu" path="res://MochiSlam Assets/Mochi Note Receptor.png" id="2_wbxth"]
 [ext_resource type="PackedScene" uid="uid://bmfsooa4810vf" path="res://Scenes/pink note.tscn" id="4_r8bcl"]
+[ext_resource type="PackedScene" uid="uid://callf0dpbcnh1" path="res://Scenes/yellow note.tscn" id="5_rlidi"]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_hf1ha")
@@ -14,7 +15,8 @@ stream = ExtResource("2_kwrm5")
 
 [node name="NoteSpawner" type="Node2D" parent="."]
 script = ExtResource("2_m34ki")
-note_scene = ExtResource("4_r8bcl")
+pink_scene = ExtResource("4_r8bcl")
+yellow_scene = ExtResource("5_rlidi")
 
 [node name="Notes" type="Node2D" parent="."]
 
