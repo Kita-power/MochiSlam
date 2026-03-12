@@ -1,4 +1,5 @@
 extends Node2D
+class_name Note
 
 enum NoteType { CENTER, RIM }
 
