@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dg3x15yi362m5"]
+
+[ext_resource type="Script" uid="uid://bvqcgwu0a011j" path="res://Scripts/Gameplay.gd" id="1_tdndw"]
+[ext_resource type="AudioStream" uid="uid://be4a75kink0jj" path="res://Moshi_Music/Moshi Moshi (feat. 百足) (Sped up).ogg" id="2_ovofm"]
+[ext_resource type="Script" uid="uid://cqla4eryktw8f" path="res://Scripts/Conductor.gd" id="3_mofsa"]
+[ext_resource type="Script" uid="uid://ciyn4wvec1wt3" path="res://Scripts/note_spawner.gd" id="4_mofsa"]
+[ext_resource type="Texture2D" uid="uid://dut6835x47pgu" path="res://MochiSlam Assets/Mochi Note Receptor.png" id="4_ovofm"]
+[ext_resource type="PackedScene" uid="uid://bmfsooa4810vf" path="res://Scenes/pink note.tscn" id="5_xwjbm"]
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource("1_tdndw")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ovofm")
+volume_db = -6.171
+script = ExtResource("3_mofsa")
+bpm = 172.81
+
+[node name="NoteSpawner" type="Node2D" parent="."]
+script = ExtResource("4_mofsa")
+note_scene = ExtResource("5_xwjbm")
+
+[node name="Notes" type="Node2D" parent="."]
+
+[node name="Lane" type="Node2D" parent="."]
+
+[node name="LaneBody" type="ColorRect" parent="Lane"]
+offset_top = 254.0
+offset_right = 1152.0
+offset_bottom = 394.0
+color = Color(0.266575, 0.266575, 0.266575, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Lane"]
+position = Vector2(66, 324)
+scale = Vector2(4, 4)
+texture = ExtResource("4_ovofm")

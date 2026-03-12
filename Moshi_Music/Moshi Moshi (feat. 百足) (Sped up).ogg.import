@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://be4a75kink0jj"
+path="res://.godot/imported/Moshi Moshi (feat. 百足) (Sped up).ogg-b08c33f6983c082608f9d2dffd2c7b8a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Moshi_Music/Moshi Moshi (feat. 百足) (Sped up).ogg"
+dest_files=["res://.godot/imported/Moshi Moshi (feat. 百足) (Sped up).ogg-b08c33f6983c082608f9d2dffd2c7b8a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
