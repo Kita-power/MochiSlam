@@ -3,9 +3,9 @@ extends Node2D
 var note_beat: float = 0.0
 
 @export var hit_x: float = 66.0
-@export var spawn_x: float = 1400.0
+@export var spawn_x: float = 2048.0
 @export var lead_beats: float = 8.0
-@export var lane_y: float = 324.0
+@export var lane_y: float = 540.0
 
 func _ready() -> void:
 	position.y = lane_y

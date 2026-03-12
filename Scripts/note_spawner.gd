@@ -4,7 +4,7 @@ extends Node2D
 @export var note_scene: PackedScene
 @export var lead_beats: float = 8.0
 
-var chart: Array[float] = [2.0, 4.0, 6.0, 8.0]
+var chart: Array[float] = [10.0, 12.0, 14.0, 16.0]
 var next_index: int = 0
 
 func _process(_delta: float) -> void:

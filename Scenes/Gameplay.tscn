@@ -21,12 +21,12 @@ note_scene = ExtResource("4_r8bcl")
 [node name="Lane" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Lane"]
-offset_top = 254.0
-offset_right = 1152.0
-offset_bottom = 394.0
+offset_top = 470.0
+offset_right = 1920.0
+offset_bottom = 610.0
 color = Color(0.340339, 0.340339, 0.340339, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lane"]
-position = Vector2(66, 324)
+position = Vector2(66, 540)
 scale = Vector2(4, 4)
 texture = ExtResource("2_wbxth")
