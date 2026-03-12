@@ -1,6 +1,6 @@
 extends Node
 
-var bpm = 120.0
+var bpm = 172.81
 var seconds_per_beat
 var song_position = 0.0
 var song_position_in_beats = 0.0
