@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://fhjrradwarha"]
+[gd_scene load_steps=6 format=3 uid="uid://fhjrradwarha"]
 
 [ext_resource type="Script" uid="uid://bvqcgwu0a011j" path="res://Scripts/Gameplay.gd" id="1_hf1ha"]
 [ext_resource type="AudioStream" uid="uid://be4a75kink0jj" path="res://Moshi_Music/Moshi Moshi (feat. 百足) (Sped up).ogg" id="2_kwrm5"]
 [ext_resource type="Script" uid="uid://ciyn4wvec1wt3" path="res://Scripts/note_spawner.gd" id="2_m34ki"]
 [ext_resource type="Texture2D" uid="uid://dut6835x47pgu" path="res://MochiSlam Assets/Mochi Note Receptor.png" id="2_wbxth"]
 [ext_resource type="PackedScene" uid="uid://bmfsooa4810vf" path="res://Scenes/pink note.tscn" id="4_r8bcl"]
-[ext_resource type="PackedScene" uid="uid://callf0dpbcnh1" path="res://Scenes/yellow note.tscn" id="5_rlidi"]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_hf1ha")
@@ -15,20 +14,19 @@ stream = ExtResource("2_kwrm5")
 
 [node name="NoteSpawner" type="Node2D" parent="."]
 script = ExtResource("2_m34ki")
-pink_scene = ExtResource("4_r8bcl")
-yellow_scene = ExtResource("5_rlidi")
+note_scene = ExtResource("4_r8bcl")
 
 [node name="Notes" type="Node2D" parent="."]
 
 [node name="Lane" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Lane"]
-offset_top = 470.0
-offset_right = 1920.0
-offset_bottom = 610.0
+offset_top = 254.0
+offset_right = 1152.0
+offset_bottom = 394.0
 color = Color(0.340339, 0.340339, 0.340339, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lane"]
-position = Vector2(66, 540)
+position = Vector2(66, 324)
 scale = Vector2(4, 4)
 texture = ExtResource("2_wbxth")
