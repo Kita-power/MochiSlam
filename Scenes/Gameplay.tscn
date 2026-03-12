@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg3x15yi362m5"]
+
+[ext_resource type="Script" uid="uid://bvqcgwu0a011j" path="res://Scripts/Gameplay.gd" id="1_tdndw"]
+[ext_resource type="AudioStream" uid="uid://be4a75kink0jj" path="res://Moshi_Music/Moshi Moshi (feat. 百足) (Sped up).ogg" id="2_ovofm"]
+[ext_resource type="Script" uid="uid://cqla4eryktw8f" path="res://Scripts/Conductor.gd" id="3_mofsa"]
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource("1_tdndw")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ovofm")
+script = ExtResource("3_mofsa")
+
+[node name="NoteSpawner" type="Node2D" parent="."]
+
+[node name="Notes" type="Node2D" parent="."]
