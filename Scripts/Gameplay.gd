@@ -1,5 +1,5 @@
 extends Node2D
-
+@onready var drum_receptor = $Lane/DrumReceptor
 @onready var notes_container: Node = $Notes
 
 @export var perfect_window_beats: float = 0.10
@@ -10,11 +10,46 @@ func _ready() -> void:
 	$Music.play()
 	print("Viewport size:", get_viewport().get_visible_rect().size)
 
+#Reminder that yellow is rim, pink is centre.
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("hit_centre"):
-		_try_hit(Note.NoteType.CENTER)
-	if Input.is_action_just_pressed("hit_rim"):
+	if Input.is_action_just_pressed("hit_left_rim"):
 		_try_hit(Note.NoteType.RIM)
+
+	if Input.is_action_pressed("hit_left_rim"):
+		$Lane/DrumReceptor.set_hit_visible("left_rim", true)
+
+	if Input.is_action_just_released("hit_left_rim"):
+		$Lane/DrumReceptor.set_hit_visible("left_rim", false)
+
+
+	if Input.is_action_just_pressed("hit_left_centre"):
+		_try_hit(Note.NoteType.CENTER)
+
+	if Input.is_action_pressed("hit_left_centre"):
+		$Lane/DrumReceptor.set_hit_visible("left_centre", true)
+
+	if Input.is_action_just_released("hit_left_centre"):
+		$Lane/DrumReceptor.set_hit_visible("left_centre", false)
+
+
+	if Input.is_action_just_pressed("hit_right_centre"):
+		_try_hit(Note.NoteType.CENTER)
+
+	if Input.is_action_pressed("hit_right_centre"):
+		$Lane/DrumReceptor.set_hit_visible("right_centre", true)
+
+	if Input.is_action_just_released("hit_right_centre"):
+		$Lane/DrumReceptor.set_hit_visible("right_centre", false)
+
+
+	if Input.is_action_just_pressed("hit_right_rim"):
+		_try_hit(Note.NoteType.RIM)
+
+	if Input.is_action_pressed("hit_right_rim"):
+		$Lane/DrumReceptor.set_hit_visible("right_rim", true)
+
+	if Input.is_action_just_released("hit_right_rim"):
+		$Lane/DrumReceptor.set_hit_visible("right_rim", false)
 
 func _try_hit(expected_type: int) -> void:
 	var current_beat: float = float(Conductor.song_position_in_beats)

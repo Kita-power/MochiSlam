@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://fhjrradwarha"]
+[gd_scene load_steps=13 format=3 uid="uid://fhjrradwarha"]
 
 [ext_resource type="Script" uid="uid://bvqcgwu0a011j" path="res://Scripts/Gameplay.gd" id="1_hf1ha"]
 [ext_resource type="AudioStream" uid="uid://be4a75kink0jj" path="res://Moshi_Music/Moshi Moshi (feat. 百足) (Sped up).ogg" id="2_kwrm5"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dut6835x47pgu" path="res://MochiSlam Assets/Mochi Note Receptor.png" id="2_wbxth"]
 [ext_resource type="PackedScene" uid="uid://bmfsooa4810vf" path="res://Scenes/pink note.tscn" id="4_r8bcl"]
 [ext_resource type="PackedScene" uid="uid://callf0dpbcnh1" path="res://Scenes/yellow note.tscn" id="5_rlidi"]
+[ext_resource type="Script" uid="uid://4v41axgnu4ve" path="res://Scenes/drum_receptor.gd" id="7_ltefv"]
+[ext_resource type="Texture2D" uid="uid://dethmqtsc8e68" path="res://MochiSlam Assets/Mochi Note Receptor Left Drum.png" id="8_rg35f"]
+[ext_resource type="Texture2D" uid="uid://5lsghbm4lj11" path="res://MochiSlam Assets/Mochi Note Receptor Left rim.png" id="9_jb71e"]
+[ext_resource type="Texture2D" uid="uid://b3i7b4lpxq1v2" path="res://MochiSlam Assets/Mochi Note Receptor Right drum.png" id="10_5i20n"]
+[ext_resource type="Texture2D" uid="uid://c4hfvqnowdqh0" path="res://MochiSlam Assets/Mochi Note Receptor Right rim.png" id="11_ra47u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlidi"]
 
@@ -41,3 +46,30 @@ texture = ExtResource("2_wbxth")
 position = Vector2(66, 540)
 scale = Vector2(3.895, 3.895)
 shape = SubResource("CircleShape2D_rlidi")
+
+[node name="DrumReceptor" type="Node2D" parent="Lane"]
+script = ExtResource("7_ltefv")
+
+[node name="MochiNoteReceptorLeftDrum" type="Sprite2D" parent="Lane/DrumReceptor"]
+visible = false
+position = Vector2(66, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("8_rg35f")
+
+[node name="MochiNoteReceptorLeftRim" type="Sprite2D" parent="Lane/DrumReceptor"]
+visible = false
+position = Vector2(66, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("9_jb71e")
+
+[node name="MochiNoteReceptorRightDrum" type="Sprite2D" parent="Lane/DrumReceptor"]
+visible = false
+position = Vector2(66, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("10_5i20n")
+
+[node name="MochiNoteReceptorRightRim" type="Sprite2D" parent="Lane/DrumReceptor"]
+visible = false
+position = Vector2(66, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("11_ra47u")
