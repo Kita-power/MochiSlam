@@ -12,43 +12,43 @@ func _ready() -> void:
 
 #Reminder that yellow is rim, pink is centre.
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("hit_left_rim"):
+	if Input.is_action_just_pressed("hit_rim_left"):
 		_try_hit(Note.NoteType.RIM)
 
-	if Input.is_action_pressed("hit_left_rim"):
+	if Input.is_action_pressed("hit_rim_left"):
 		$Lane/DrumReceptor.set_hit_visible("left_rim", true)
 
-	if Input.is_action_just_released("hit_left_rim"):
+	if Input.is_action_just_released("hit_rim_left"):
 		$Lane/DrumReceptor.set_hit_visible("left_rim", false)
 
 
-	if Input.is_action_just_pressed("hit_left_centre"):
+	if Input.is_action_just_pressed("hit_centre_left"):
 		_try_hit(Note.NoteType.CENTER)
 
-	if Input.is_action_pressed("hit_left_centre"):
-		$Lane/DrumReceptor.set_hit_visible("left_centre", true)
+	if Input.is_action_pressed("hit_centre_left"):
+		$Lane/DrumReceptor.set_hit_visible("left_drum", true)
 
-	if Input.is_action_just_released("hit_left_centre"):
-		$Lane/DrumReceptor.set_hit_visible("left_centre", false)
+	if Input.is_action_just_released("hit_centre_left"):
+		$Lane/DrumReceptor.set_hit_visible("left_drum", false)
 
 
-	if Input.is_action_just_pressed("hit_right_centre"):
+	if Input.is_action_just_pressed("hit_centre_right"):
 		_try_hit(Note.NoteType.CENTER)
 
-	if Input.is_action_pressed("hit_right_centre"):
-		$Lane/DrumReceptor.set_hit_visible("right_centre", true)
+	if Input.is_action_pressed("hit_centre_right"):
+		$Lane/DrumReceptor.set_hit_visible("right_drum", true)
 
-	if Input.is_action_just_released("hit_right_centre"):
-		$Lane/DrumReceptor.set_hit_visible("right_centre", false)
+	if Input.is_action_just_released("hit_centre_right"):
+		$Lane/DrumReceptor.set_hit_visible("right_drum", false)
 
 
-	if Input.is_action_just_pressed("hit_right_rim"):
+	if Input.is_action_just_pressed("hit_rim_right"):
 		_try_hit(Note.NoteType.RIM)
 
-	if Input.is_action_pressed("hit_right_rim"):
+	if Input.is_action_pressed("hit_rim_right"):
 		$Lane/DrumReceptor.set_hit_visible("right_rim", true)
 
-	if Input.is_action_just_released("hit_right_rim"):
+	if Input.is_action_just_released("hit_rim_right"):
 		$Lane/DrumReceptor.set_hit_visible("right_rim", false)
 
 func _try_hit(expected_type: int) -> void:
